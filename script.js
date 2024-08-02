@@ -112,24 +112,24 @@ function formatRelativeTime(unixTimestamp) {
 
   if (absDiff < 60) return "just now";
   if (absDiff < 3600)
-    return `${Math.floor(absDiff / 60)} minute${absDiff < 120 ? "" : "s"} ${
-      diff > 0 ? "from now" : "ago"
-    }`;
+    return `${diff > 0 ? "in" : ""} ${Math.floor(absDiff / 60)} minute${
+      absDiff < 120 ? "" : "s"
+    }${diff > 0 ? "" : " ago"}`;
   if (absDiff < 86400)
-    return `${Math.floor(absDiff / 3600)} hour${absDiff < 7200 ? "" : "s"} ${
-      diff > 0 ? "from now" : "ago"
-    }`;
+    return `${diff > 0 ? "in" : ""} ${Math.floor(absDiff / 3600)} hour${
+      absDiff < 7200 ? "" : "s"
+    }${diff > 0 ? "" : " ago"}`;
   if (absDiff < 2592000)
-    return `${Math.floor(absDiff / 86400)} day${absDiff < 172800 ? "" : "s"} ${
-      diff > 0 ? "from now" : "ago"
-    }`;
+    return `${diff > 0 ? "in" : ""} ${
+      Math.floor(absDiff / 86400) <= 1 ? "a" : Math.floor(absDiff / 86400)
+    } day${absDiff < 172800 ? "" : "s"}${diff > 0 ? "" : " ago"}`;
   if (absDiff < 31536000)
-    return `${Math.floor(absDiff / 2592000)} month${
+    return `${diff > 0 ? "in" : ""} ${Math.floor(absDiff / 2592000)} month${
       absDiff < 5184000 ? "" : "s"
-    } ${diff > 0 ? "from now" : "ago"}`;
-  return `${Math.floor(absDiff / 31536000)} year${
+    }${diff > 0 ? "" : " ago"}`;
+  return `${diff > 0 ? "in" : ""} ${Math.floor(absDiff / 31536000)} year${
     absDiff < 63072000 ? "" : "s"
-  } ${diff > 0 ? "from now" : "ago"}`;
+  }${diff > 0 ? "" : " ago"}`;
 }
 
 function updateDiscordTimestamp() {
