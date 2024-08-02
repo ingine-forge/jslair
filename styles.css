@@ -1,0 +1,119 @@
+body {
+  background: #282828;
+  color: #fbf1c7;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.center {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.input-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 164px;
+}
+
+.date-input {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  max-width: 256px;
+}
+
+.date-input > input {
+  background-color: #3c3836;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  color: #fbf1c7;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  height: 46px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.time-input {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.time-input > select {
+  background-color: #3c3836;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  color: #fbf1c7;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  height: 46px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.preview {
+  background-color: #1d2021;
+  padding: 32px 56px;
+  border-radius: 8px;
+  max-width: 1024px;
+  line-height: 24px;
+  user-select: none;
+}
+
+.mention {
+  color: #07ffef;
+  font-weight: 500;
+}
+
+.modified-time {
+  background-color: #3c3836;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+button {
+  background-color: #fbf1c7;
+  color: #3c3836;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  height: 46px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}

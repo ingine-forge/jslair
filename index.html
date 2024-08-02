@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Lair</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="center">
+    <div class="input-fields">
+      <div class="date-input">
+        <label>TCT Time</label>
+        <input type="date" id="utcDate" />
+        <div class="time-input">
+          <select id="utcHour"></select>
+          :
+          <select id="utcMinute"></select>
+        </div>
+      </div>
+      <div class="date-input">
+        <label>Your Time</label>
+        <input type="date" id="localDate" />
+        <div class="time-input">
+          <select id="localHour"></select>
+          :
+          <select id="localMinute"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview">
+      <span class="mention">@Notification</span>
+      <br />
+      There will be a jump on
+      <span id="preview-date"></span>,
+      <span id="discordTimeRemaining" class="modified-time"></span> which is
+      <span id="discordTimestamp" class="modified-time"></span> your local time.
+      <br />
+      Send a deposit of 2 Edvd's to secure your jump.
+      <br />
+      <br />
+      0/7 Slots Filled
+      <br />
+      0/1 Priority Slot Filled
+    </div>
+    <div id="copy">
+      <button id="copy-button">
+        Copy Text
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#1d2021"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path
+            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
